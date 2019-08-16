@@ -1,39 +1,36 @@
-body{
+body {
     margin: 0px;
     padding: 0px;
     display: grid;
     font-family: font76117;
     font-size: 1em;
-    grid-template-areas: "nav nav"
-                        "section section"
-                        "#rodape";
+    grid-template-areas: "nav nav" "section section" "#rodape";
     grid-template-rows: 100% 100%;
-    grid-template-columns:  100%;
+    grid-template-columns: 100%;
     background-image: linear-gradient(141deg, #2cb5e8 0%, #add8e6 31%, #2cb5e8 70%);
-    
 }
 
-nav{
+nav {
     grid-area: "nav";
     opacity: 0.8;
 }
 
-a, p{
+a, p, h2 {
     text-decoration: none;
     color: inherit;
 }
 
-section{
+section {
     grid-area: "section";
 }
 
-#rodape{
+#rodape {
     grid-area: "#rodape";
     color: lightgray;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: -0.5px 0 black;
 }
 
-div{
+div {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
@@ -43,13 +40,16 @@ div{
     position: relative;
     width: 100%;
     height: auto;
-    background:url(arquivos/vacina.mp4);
+    background: url(arquivos/vacina.mp4);
     background-size: cover;
 }
 
 .texto {
     position: absolute;
-    background-color: rgba(0,0,0,0.5);
-    color:#fff;
+    color: whitesmoke;
     text-align: center;
+    bottom: 5px;
+    font-size: 5em;
+    text-shadow:  -0.5px 0 black;
+
 }
