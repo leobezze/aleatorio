@@ -1,55 +1,96 @@
-body {
+body{
     margin: 0px;
     padding: 0px;
     display: grid;
     font-family: font76117;
     font-size: 1em;
-    grid-template-areas: "nav nav" "section section" "#rodape";
+    grid-template-areas: "nav nav nav"
+                        "section section section"
+                        "#rodape #rodape #rodape";
     grid-template-rows: 100% 100%;
-    grid-template-columns: 100%;
+    grid-template-columns:  100%;
     background-image: linear-gradient(141deg, #2cb5e8 0%, #add8e6 31%, #2cb5e8 70%);
+    
 }
 
-nav {
+.logo img{
+    height: 70px;
+    line-height: 70px;
+    color: white;
+    cursor: pointer;
+}
+
+nav div:nth-child(2){
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+nav{
     grid-area: "nav";
-    opacity: 0.8;
+    opacity: 0.95;
+    display: flex;
+    background-color: #1e2125;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
 }
 
-a, p, h2 {
+nav a button{
+    background-color: #198484;
+    color: black;
+    border: 0.5px solid lightcyan;
+    border-radius: 6px;
+    padding: 1px 20px;
+    margin-left: 1px;
+    cursor: pointer;
+    font-family: font76117;
+}
+
+nav a button:hover{
+    display: flex;
+    color: aquamarine;
+    font-size: 1.05em;
+}
+
+nav a, p{
     text-decoration: none;
-    color: inherit;
+    outline: none;
+    color: white;
 }
 
-section {
+section{
+    background-image:linear-gradient(135deg, rgb(76, 193, 204) 0%, rgb(190, 227, 231) 29%, rgb(190, 227, 231) 29%, rgb(239, 243, 243) 52%, rgb(239, 243, 243) 71%, rgb(245, 210, 216) 100%);
     grid-area: "section";
 }
 
-#rodape {
+#rodape{
     grid-area: "#rodape";
     color: lightgray;
-    text-shadow: -0.5px 0 black;
-}
-
-div {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .video {
     position: relative;
     width: 100%;
     height: auto;
-    background: url(arquivos/vacina.mp4);
+    background:url(arquivos/vacina.mp4);
     background-size: cover;
 }
 
-.texto {
+#texto {
     position: absolute;
-    color: whitesmoke;
+    background-color: rgba(0,0,0,0.5);
+    color:#fff;
     text-align: center;
-    bottom: 5px;
-    font-size: 5em;
-    text-shadow:  -0.5px 0 black;
+    top: 200px;
+}
 
+.conteudo-info{
+    background-color: #1fa5b2;
+}
+
+.conteudo-login{
+    background-color: white;
 }
