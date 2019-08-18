@@ -7,18 +7,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://www.fontify.me/wf/fff6312bff92af0686e731bf7890edd2" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="arquivos/seringa-crop2.ico" type="image/x-icon">
     <title>Vá de vacina</title>
+
 </head>
 
 <body>
     <header>
         <nav>
-            <div>
+            <div class="logo">
+                <img src="arquivos/logo.png" alt="saude">
+            </div>
+            <div class="itens-menu">
                 <a href="#Login" class="scrollSuave">
-                    <p>Login</p>
+                    <button>
+                        <p>Login - Cidadão</p>
+                    </button>
                 </a>
-                <p>Cidadão</p>
-                <p>Posto de saúde</p>
+                <a href="">
+                    <button>
+                        <p>Como Funciona?</p>
+                    </button>
+                </a>
+                <a href="">
+                    <button>
+                        <p>Login - Posto de saúde</p>
+                    </button>
+                </a>
             </div>
         </nav>
         <section>
@@ -26,21 +42,66 @@
                 <video width="100%" height="auto" autoplay loop>
                     <source src="arquivos/vacina.mp4" type="video/mp4">
                 </video>
-                <div class="texto">
-                    <h2>Proteja-se</h2>
-                    <h2>Proteja sua Familia</h2>
-                </div>
-
             </div>
-
+            <div id="log">
+            </div>
         </section>
     </header>
 
-    <aside>
-        <a id="Login"><strong>Faça seu Login!</strong></a>
-    </aside>
+    <section>
+        <aside>
+            <a id="Login"><strong>Faça seu Login!</strong></a>
+            <div class="container">
+                <div class="logo-proj">
+                    <img src="arquivos/seringa-crop1.png" alt="">
+                </div>
+                <div class="caixa-login">
+                    <div class="conteudo-info">
+                        <h1>Bem-vindo(a)!</h1>
+                        <p>O site Vá de Vacina lhe possibilita a portabilidade e acompanhamento de sua carteira de
+                            vacina de
+                            forma totalmente digital.
+                            Foi produzido pela empresa Health e Integrado ao Sistema Único de Saúde (SUS) na cidade de
+                            São
+                            Paulo.</p>
+                        <p>
+                    </div>
+                    <div class="conteudo-login">
+                        <h2>Acesse aqui</h2>
+                        <p>Preencha os campos abaixo e clique no botão <span>“ENTRAR”</span>.</p>
+                        <form id="formLogin" novalidate="novalidate">
+                            <div class="form-group">
+                                <input id="txtNumeroUsuario" type="text" required="" class="documento" data-val="true"
+                                    data-val-required="Informe o número do seu documento" name="Documento" value=""
+                                    aria-required="true">
+                                <span class="barra-ativa"></span>
+                                <span class="barra"></span>
+                                <label>Digite o CPF ou número do cartão SUS</label>
+                                <span id="spanErroDocumento" class="erro erroMaior field-validation-valid"
+                                    data-valmsg-for="Documento" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="form-group">
+                                <input id="txtDataNascimento" data-val="true"
+                                    data-val-validardatanascimento="Data de nascimento incorreta" value="" type="text"
+                                    required="" class="data" data-val-required="Informe a data de nascimento"
+                                    name="DataNascimento" aria-required="true">
+                                <span class="barra-ativa"></span>
+                                <span class="barra"></span>
+                                <label>Digite sua data de nascimento</label>
+                                <span class="erro field-validation-valid" data-valmsg-for="DataNascimento"
+                                    data-valmsg-replace="true"></span>
+                            </div>
+                            <button id="btnEntrar" class="btn btn-primario">entrar</button>
+                        </form>
+                        <span>Não conseguiu acessar? <a href="/paciente/cadastrar">Cadastre-se aqui</a></span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </section>
+
     <div id="rodape">
-        <p>VÁDEVACINA SERVIÇOS LTDA - Copyright © 2019 - <a href="www.vacina.com.br">Carteira de Vacina Digital</a> -
+        <p>VádeVacina Serviços LTDA - Copyright © 2019 - <a href="www.vadevacina.com.br">Health</a> -
             Desenvolvido por Leonardo, Rubens e João.</p>
     </div>
 </body>
