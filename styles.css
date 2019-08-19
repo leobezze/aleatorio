@@ -3,9 +3,8 @@ body{
     padding: 0px;
     display: grid;
     font-family: font76117;
-    font-size: 1em;
     grid-template-areas: "nav nav nav"
-                        "section section section"
+                        "aside aside aside"
                         "#rodape #rodape #rodape";
     grid-template-rows: 100% 100%;
     grid-template-columns:  100%;
@@ -13,10 +12,9 @@ body{
     
 }
 
-.logo img{
+.logo-empresa img{
     height: 70px;
     line-height: 70px;
-    color: white;
     cursor: pointer;
 }
 
@@ -39,36 +37,33 @@ nav{
 
 nav a button{
     background-color: #198484;
-    color: black;
+    color: #1e2125;
     border: 0.5px solid lightcyan;
     border-radius: 6px;
-    padding: 1px 20px;
+    padding: 1px 10px 1px 10px;
     margin-left: 1px;
     cursor: pointer;
     font-family: font76117;
+    transition: all .3s;
+    text-decoration: none;
+    text-transform: capitalize;
+    outline: none;
 }
 
-nav a button:hover{
+nav a button p:hover{
     display: flex;
     color: aquamarine;
-    font-size: 1.05em;
+    font-size: 150%;
 }
 
-nav a, p{
+nav a{
     text-decoration: none;
     outline: none;
-    color: white;
+    color: #1e2125;   
 }
 
-section{
-    background-image:linear-gradient(135deg, rgb(76, 193, 204) 0%, rgb(190, 227, 231) 29%, rgb(190, 227, 231) 29%, rgb(239, 243, 243) 52%, rgb(239, 243, 243) 71%, rgb(245, 210, 216) 100%);
-    grid-area: "section";
-}
-
-#rodape{
-    grid-area: "#rodape";
-    color: lightgray;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+button p{
+    color: #1e2125;
 }
 
 .video {
@@ -87,10 +82,123 @@ section{
     top: 200px;
 }
 
+aside{
+    background-image:linear-gradient(135deg, rgb(76, 193, 204) 0%, rgb(190, 227, 231) 29%, rgb(190, 227, 231) 29%, rgb(239, 243, 243) 52%, rgb(239, 243, 243) 71%, rgb(245, 210, 216) 100%);
+    grid-area: "aside";
+}
+
+.logo-proj img{
+    height: 70px;
+    line-height: 70px;
+    cursor: pointer;
+}
+
 .conteudo-info{
     background-color: #1fa5b2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    padding: 0px 30px 10px 30px;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.3);
+    border-radius: 10px 0px 0px 10px;
+    font-size: 24px;
+}
+
+.conteudo-info h1, p{
+    color: #fff;
+
+}
+
+.conteudo-login h2{
+   color:#1fa5b2;
+   font-size: 25px;
 }
 
 .conteudo-login{
     background-color: white;
+    width: 50%;
+    padding: 5px 10px 0px 15px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.conteudo-login p{
+    color: #1e2125;
+}
+
+.form-group input{
+    border: none;
+    padding: 15px 0px 15px 0px;
+    width: 100%;
+    font-size: 150%;
+}
+
+aside .caixa-login{
+    display: flex;
+    font-family: sans-serif;
+    padding: 15px 200px 15px 200px;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.3);
+    height: 450px;
+    
+}
+
+aside button{
+    background-color: #198484;
+    color: #1e2125;
+    border: 0.5px solid lightcyan;
+    border-radius: 6px;
+    padding: 12px 30px;
+    margin-left: 1px;
+    cursor: pointer;
+    font-family: font76117;
+    font-size: 16px;
+    transition: all .3s;
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 100%;
+    outline: none;
+}
+
+aside button:hover{
+    display: block;
+    color: aquamarine;
+    font-size: 150%;
+}
+
+#rodape{
+    grid-area: "#rodape";
+    color: lightgray;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+input{
+    display: block;
+    position:relative;
+    padding: 0px 25px 50px 0px;
+    width: 100%;
+}
+
+.form-group label + span{
+    display: block;
+    height: 40px;
+}
+
+.form-group{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra:active{
+    background: aquamarine;
+}
+  
+.form-group .barra::before, .form-group .barra::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: lightgray;
+    margin: 0 auto;
+    transition: .2s ease all;
 }
