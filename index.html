@@ -16,21 +16,21 @@
 <body>
     <header>
         <nav>
-            <div class="logo">
+            <div class="logo-empresa">
                 <img src="arquivos/logo.png" alt="saude">
             </div>
             <div class="itens-menu">
-                <a href="#Login" class="scrollSuave">
+                <a href="#login" class="scrollSuave">
                     <button>
                         <p>Login - Cidadão</p>
                     </button>
                 </a>
-                <a href="">
+                <a href="#como-funciona" class="scrollSuave">
                     <button>
                         <p>Como Funciona?</p>
                     </button>
                 </a>
-                <a href="">
+                <a href="#login-posto">
                     <button>
                         <p>Login - Posto de saúde</p>
                     </button>
@@ -43,14 +43,16 @@
                     <source src="arquivos/vacina.mp4" type="video/mp4">
                 </video>
             </div>
-            <div id="log">
+
             </div>
         </section>
     </header>
 
     <section>
         <aside>
-            <a id="Login"><strong>Faça seu Login!</strong></a>
+            <a id="login"><strong>Faça seu Login!</strong></a>
+            <a id="como-funciona">Passo a passo</a>
+            <a id="login-posto">Faça parte da rede proteção</a>
             <div class="container">
                 <div class="logo-proj">
                     <img src="arquivos/seringa-crop1.png" alt="">
@@ -91,7 +93,7 @@
                                 <span class="erro field-validation-valid" data-valmsg-for="DataNascimento"
                                     data-valmsg-replace="true"></span>
                             </div>
-                            <button id="btnEntrar" class="btn btn-primario">entrar</button>
+                            <button id="btnEntrar" class="btn btn-primario">Entrar</button>
                         </form>
                         <span>Não conseguiu acessar? <a href="/paciente/cadastrar">Cadastre-se aqui</a></span>
                     </div>
@@ -99,11 +101,13 @@
             </div>
         </aside>
     </section>
+    <footer>
+        <div id="rodape">
 
-    <div id="rodape">
-        <p>VádeVacina Serviços LTDA - Copyright © 2019 - <a href="www.vadevacina.com.br">Health</a> -
-            Desenvolvido por Leonardo, Rubens e João.</p>
-    </div>
+            <p>VádeVacina Serviços LTDA - Copyright © 2019 - <a href="www.vadevacina.com.br">Health</a> -
+                Desenvolvido por Leonardo, Rubens e João.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
