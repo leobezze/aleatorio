@@ -3,9 +3,9 @@ body{
     padding: 0px;
     display: grid;
     font-family: font76117;
-    grid-template-areas: "nav nav nav"
-                        "aside aside aside"
-                        "#rodape #rodape #rodape";
+    grid-template-areas: "nav nav nav nav nav"
+                        "aside aside aside aside aside"
+                        "#rodape #rodape #rodape #rodape #rodape";
     grid-template-rows: 100% 100%;
     grid-template-columns:  100%;
     background-image: linear-gradient(141deg, #2cb5e8 0%, #add8e6 31%, #2cb5e8 70%);
@@ -13,9 +13,10 @@ body{
 }
 
 .logo-empresa img{
-    height: 70px;
-    line-height: 70px;
+    height: 85px;
+    line-height: 85px;
     cursor: pointer;
+
 }
 
 nav div:nth-child(2){
@@ -32,6 +33,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.3);
 
 }
 
@@ -44,7 +46,6 @@ nav a button{
     margin-left: 1px;
     cursor: pointer;
     font-family: font76117;
-    transition: all .3s;
     text-decoration: none;
     text-transform: capitalize;
     outline: none;
@@ -54,6 +55,7 @@ nav a button p:hover{
     display: flex;
     color: aquamarine;
     font-size: 150%;
+    transition: all .3s;
 }
 
 nav a{
@@ -74,23 +76,69 @@ button p{
     background-size: cover;
 }
 
-#texto {
+.escrever{
+    display: block;
+    width: 100%;
+}
+
+.escrever-video {
     position: absolute;
-    background-color: rgba(0,0,0,0.5);
     color:#fff;
     text-align: center;
-    top: 200px;
+    width: 100%;
+  	overflow: hidden;
+  	letter-spacing: 2px;
+ 	animation: typing 5s steps(30, end), blink .75s step-end infinite;
+    white-space: nowrap;
+    font-size: 500%;
+    font-weight: 700;
+    border-right: 4px solid orange;
+    box-sizing: border-box;
+    justify-content: center;
+    bottom: 20%;
+}
+
+@keyframes typing {
+    from { 
+        width: 0% 
+    }
+    to { 
+        width: 100% 
+    }
+}
+
+@keyframes blink {
+    from, to { 
+        border-color: transparent 
+    }
+    50% { 
+        border-color: orange; 
+    }
 }
 
 aside{
     background-image:linear-gradient(135deg, rgb(76, 193, 204) 0%, rgb(190, 227, 231) 29%, rgb(190, 227, 231) 29%, rgb(239, 243, 243) 52%, rgb(239, 243, 243) 71%, rgb(245, 210, 216) 100%);
     grid-area: "aside";
+    text-align: center;
+}
+
+.container{
+    text-align: center;
+}
+
+.logo-proj{
+    font-size: 30px;
 }
 
 .logo-proj img{
-    height: 70px;
-    line-height: 70px;
+    height: 100px;
+    line-height: 100px;
     cursor: pointer;
+}
+
+.logo-proj p{
+    color: #2787c1;
+    padding-top: 10;
 }
 
 .conteudo-info{
@@ -99,14 +147,15 @@ aside{
     flex-direction: column;
     justify-content: flex-start;
     width: 50%;
-    padding: 0px 30px 10px 30px;
     box-shadow: 0 3px 5px 0 rgba(0,0,0,.3);
     border-radius: 10px 0px 0px 10px;
     font-size: 24px;
+    
 }
 
 .conteudo-info h1, p{
     color: #fff;
+    padding: 0% 5% 0% 5%;
 
 }
 
@@ -118,7 +167,6 @@ aside{
 .conteudo-login{
     background-color: white;
     width: 50%;
-    padding: 5px 10px 0px 15px;
     border-radius: 0px 10px 10px 0px;
 }
 
@@ -128,17 +176,19 @@ aside{
 
 .form-group input{
     border: none;
-    padding: 15px 0px 15px 0px;
+    padding: 10px 0px 3px 0px;
     width: 100%;
     font-size: 150%;
+    height: 50%;
 }
 
 aside .caixa-login{
     display: flex;
     font-family: sans-serif;
-    padding: 15px 200px 15px 200px;
+    padding: 15px 10% 15px 10%;
     box-shadow: 0 3px 5px 0 rgba(0,0,0,.3);
-    height: 450px;
+    height: 100%;
+
     
 }
 
@@ -155,7 +205,7 @@ aside button{
     transition: all .3s;
     text-decoration: none;
     text-transform: capitalize;
-    width: 100%;
+    width: 90%;
     outline: none;
 }
 
@@ -174,13 +224,26 @@ aside button:hover{
 input{
     display: block;
     position:relative;
-    padding: 0px 25px 50px 0px;
+    width: 100%;
+    font-size: 100%px;
+    padding: 10px 10px 10px 5px;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-bottom: 2px solid lightgray;
+    background-color: transparent;
+    color: #252525;
+    box-shadow: none;
+}
+
+input:focus{
+    border-bottom: 2px solid aqua;
     width: 100%;
 }
 
-.form-group label + span{
+.form-group label,span{
     display: block;
-    height: 40px;
+    font-size: 100%;
 }
 
 .form-group{
@@ -189,16 +252,40 @@ input{
     width: 100%;
 }
 
-.barra:active{
-    background: aquamarine;
+.form-group .barra-ativa{
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: .5;
 }
-  
-.form-group .barra::before, .form-group .barra::after{
-    content: '';
+
+.form-group .position{  
+    position: relative;
     display: block;
     width: 100%;
+}
+
+.form-group .barra::before{
+    left: 50%;
+}
+.form-group .barra::after{
+    right: 50%;
+}
+  
+.form-group .barra::before, .barra::after{
+    content: '';
+    display: block;
     height: 1px;
-    background: lightgray;
-    margin: 0 auto;
+    width: 45%;
+    position: absolute;
+    background-color: lightgray;
+    margin: 0;
     transition: .2s ease all;
+}
+
+.form-group .barra :hover ::after, ::before{
+    height: 15%;
 }
